@@ -1,92 +1,35 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  plugins: [
-    'storybook',
-    '@typescript-eslint',
-    'simple-import-sort',
-    'unused-imports',
-  ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
-    'eslint:recommended',
     'next',
-    'next/core-web-vitals',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
   rules: {
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
-    'no-console': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
     'react/display-name': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    //#region  //*=========== Unused Import ===========
-    'unused-imports/no-unused-imports': 'warn',
-    'unused-imports/no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
-    //#endregion  //*======== Unused Import ===========
-
-    //#region  //*=========== Import Sort ===========
-    'simple-import-sort/exports': 'warn',
-    'simple-import-sort/imports': [
-      'warn',
-      {
-        groups: [
-          // ext library & side effect imports
-          ['^@?\\w', '^\\u0000'],
-          // {s}css files
-          ['^.+\\.s?csxs$'],
-          // Lib and hooks
-          ['^@/lib', '^@/hooks', '^@/utils'],
-          // static data
-          ['^@/data'],
-          // components
-          ['^@/components', '^@/container', '^@/stories'],
-          // zustand store
-          ['^@/store'],
-          // Other imports
-          ['^@/'],
-          // relative paths up until 3 level
-          [
-            '^\\./?$',
-            '^\\.(?!/?$)',
-            '^\\.\\./?$',
-            '^\\.\\.(?!/?$)',
-            '^\\.\\./\\.\\./?$',
-            '^\\.\\./\\.\\.(?!/?$)',
-            '^\\.\\./\\.\\./\\.\\./?$',
-            '^\\.\\./\\.\\./\\.\\.(?!/?$)',
-          ],
-          ['^@/types'],
-          // other that didnt fit in
-          ['^'],
-        ],
-      },
-    ],
-    //#endregion  //*======== Import Sort ===========
-  },
-  globals: {
-    React: true,
-    JSX: true,
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    quotes: ['error', 'single'],
   },
 };

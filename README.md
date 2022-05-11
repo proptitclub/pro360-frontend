@@ -1,45 +1,18 @@
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![NextJs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Mui](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
-![Styled Components](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![Netlify](https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+![ProPTIT](https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/48418691_1795685707220085_7989467781420548096_n.png?_nc_cat=111&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=pKRLWcnxIOsAX9wYUzw&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9o7vtYG5BeOLmmgY8Du5J9inRbuCrgoPCWrgIk7tOBpA&oe=62A2DDFB)
 
-<div align="center">
-  <h1>nextjs-ts-mui5-scss-storybook-starter📕</h1>
-  <p>Next.js + TypeScript + Material UI v5 + Sass + Storybook starter📕 with linting & prettier pre-configured</p>
-  <p>Made by <a href="https://ridho-homepage.vercel.app/">M Ridho Anshory</a></p>
-</div>
+# Pro360 Frontend
 
-## Getting Started
-
-### Clone this template using one of these ways:
-
-1. Use this repository as template
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
-   
-   I'll appreciate if you do, so this template can be known by others too 😄
-   
-   ![Use as template](https://user-images.githubusercontent.com/47277994/149296446-42b359fa-878a-4fc2-9297-8921db48c3e5.png)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/RidhoAnshory/nextjs-ts-mui5-scss-storybook-starter your-project-name
-   ```
 ### Run the repository
+
 First, install the dependencies:
 
 ```bash
-npm install
-#
 yarn
 ```
 
-Second, run the development server:
+Second, run app:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
