@@ -7,7 +7,8 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    paddingBottom: 30,
+    overflow: 'hidden',
+    marginBottom: 16,
   },
   sidebarWrap: {
     width: 300,
@@ -50,6 +51,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     maxWidth: '70%',
     paddingLeft: 6,
+    padding: '16px 0',
 
     '& *': {
       fontWeight: 500,
@@ -64,6 +66,16 @@ const useStyles = makeStyles({
   accountEmail: {
     fontSize: 13,
     lineHeight: '16px',
+  },
+  sidebarFooter: {
+    position: 'relative',
+  },
+  footerWrap: {
+    position: 'absolute',
+    maxWidth: '100%',
+    transition: '0.4s',
+    top: '100%',
+    backgroundColor: '#fff',
   },
 });
 
