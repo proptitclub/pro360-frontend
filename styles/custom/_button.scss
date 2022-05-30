@@ -1,17 +1,18 @@
 .button {
   cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   display: inline-flex;
   justify-content: center;
+  text-transform: none;
   align-items: center;
-  height: 37.125px;
+  height: 50px;
   box-shadow: none;
-
-  border-radius: 4px;
-  width: 180px;
+  width: fit-content;
+  padding: 12px 40px;
+  border-radius: 50px;
 
   &:focus,
   &:active,
@@ -31,32 +32,24 @@
 }
 
 .button--outlined {
-  border: 1px solid #D1D1D1 !important;
-  color: #7343DE;
+  border: 1px solid $main_color !important;
+  color: $main_color;
 
   &:hover {
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border: 1px solid #7343DE !important;
-    background-color: rgb(103, 58, 203, 0.1);
+    background-color: rgba(77, 158, 254, 0.1);
   }
 }
 
 .button--contained {
-  border: 1px solid #D1D1D1 !important;
-  background-color: #7343DE;
-  color: #FFFFFF;
-}
-
-.button-border-active {
-  border: 1px solid #7343DE !important;
+  border: 1px solid $main_color !important;
+  background-color: $main_color;
+  color: $white_color;
 }
 
 .button--active {
-  border: 1px solid #7343DE !important;
-  background-color: rgb(103, 58, 203, 0.1);
-  color: #7343DE;
+  border: 1px solid $main_color !important;
+  background-color: rgba(77, 158, 254, 0.1);
+  color: $main_color;
 }
 
 .button--small {
