@@ -1,0 +1,51 @@
+.eventText {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #505050;
+  margin-bottom: 6px;
+}
+.eventTitle {
+  font-weight: 700;
+}
+.eventDescription {
+  font-weight: 400;
+}
+.slotText {
+  color: #a1a1a1;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  height: 50px;
+}
+.day {
+  margin-bottom: 5px;
+}
+.date {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dateText {
+  /* transform: translateY(-5%); */
+}
+.otherDay {
+  color: #505050;
+}
+.otherDate {
+  color: #505050;
+}
+.todayDay {
+  color: #1a73e8;
+}
+.todayDate {
+  background-color: #1a73e8;
+  color: white;
+}

@@ -11,6 +11,9 @@ import { Provider } from 'react-redux';
 import store from '@/store';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import '@fullcalendar/common/main.css';
+import '@fullcalendar/daygrid/main.css';
+import '@fullcalendar/timegrid/main.css';
 
 export default function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
