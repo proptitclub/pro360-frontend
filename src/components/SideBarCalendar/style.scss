@@ -1,0 +1,196 @@
+.calendar-container{
+  display: flex;
+  justify-content: center;
+}
+
+.react-calendar { 
+  width: 250px;
+  max-width: 100%;
+  margin: auto;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+
+  button{
+    border-radius: 6px;
+  }
+ }
+ .react-calendar__navigation button {
+  color: #4d9efe;
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+ }
+ .react-calendar__navigation button:enabled:hover,
+ .react-calendar__navigation button:enabled:focus {
+  background-color: #f8f8fa;
+ }
+ .react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+ }
+ abbr[title] {
+  text-decoration: none;
+ }
+
+ .react-calendar__navigation__arrow.react-calendar__navigation__next-button,
+ .react-calendar__navigation__arrow.react-calendar__navigation__prev-button{
+   padding: 0;
+   
+ }
+
+ .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button, 
+ .react-calendar__navigation__arrow.react-calendar__navigation__next2-button{
+   display: none;
+ }
+
+ .react-calendar__month-view__weekdays{
+   color: #9d9d9d;
+   text-transform: capitalize;
+ }
+
+ button.react-calendar__navigation__label{
+  order: -1;
+  text-align: initial;
+  font-weight: 600;
+  color: #505050;
+  pointer-events: none;
+ }
+
+
+  .react-calendar__month-view__days__day--weekend {
+  color: inherit;
+ } 
+ .react-calendar__tile:enabled:hover,
+ .react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: #4d9efe;
+  border-radius: 6px;
+ }
+ .react-calendar__tile--now {
+  background: #4d9efe33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #4d9efe;
+ }
+ .react-calendar__tile--now:enabled:hover,
+ .react-calendar__tile--now:enabled:focus {
+  background: #4d9efe33;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #4d9efe;
+ }
+ .react-calendar__tile--hasActive:enabled:hover,
+ .react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+ }
+ .react-calendar__tile--active {
+  background: #4d9efe;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+ }
+ .react-calendar__tile--active:enabled:hover,
+ .react-calendar__tile--active:enabled:focus {
+  background: #4d9efe;
+  color: white;
+ }
+ .react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+ }
+ .react-calendar__tile--range {
+  background: #f8f8fa;
+  color: #4d9efe;
+  border-radius: 0;
+ }
+ .react-calendar__tile--rangeStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: #4d9efe;
+  color: white;
+ }
+ .react-calendar__tile--rangeEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #4d9efe;
+  color: white;
+ }
+
+
+
+.react-calendar__tile{
+  position: relative;
+  font-weight: 600;
+}
+
+
+.react-calendar__tile .dots1{
+  width: 4px;
+  height: 4px;
+  background-color: #ff6b00;
+  border-radius: 100%;
+}
+
+.react-calendar__tile .dots2{
+  width: 4px;
+  height: 4px;
+  background-color: #42ff00;
+  border-radius: 100%;
+}
+
+.react-calendar__tile .dots3{
+  width: 4px;
+  height: 4px;
+  background-color: #0066ff;
+  border-radius: 100%;
+}
+
+
+.position-abs{
+  position: absolute;
+
+  &.--center-in-1{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.--left-in-2{
+    bottom: 6px;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+  &.--right-in-2{
+    bottom: 6px;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+  &.--left-in-3{
+    bottom: 6px;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+
+  &.--center-in-3{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.--right-in-3{
+    bottom: 6px;
+    left: 70%;
+    transform: translateX(-50%);
+  }
+}
