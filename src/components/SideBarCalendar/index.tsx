@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import moment from 'moment';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import 'react-calendar/dist/Calendar.css';
+
 const SideBarCalendar = () => {
     const mark:Array<{date: string, dots: number}> = [
         {
@@ -30,7 +30,7 @@ const SideBarCalendar = () => {
       ]
     
       const [date, setDate] = useState(new Date());
-      const [currentDate, setcurrentDate] : any = useState(new Date())
+      const [currentDate, setcurrentDate] = useState(new Date())
 
 
     return (
@@ -58,7 +58,7 @@ const SideBarCalendar = () => {
       
       tileContent={({ date, activeStartDate }) => {
         
-        const x = mark.find(x=>x.date===moment(date).format("DD-MM-YYYY"))
+        const x = mark.find(x=>x.date===moment(date).format('DD-MM-YYYY'))
         
         
         if(typeof x !== 'undefined'){
