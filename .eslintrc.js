@@ -30,6 +30,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/exhaustive-deps': 'off',
+    '@next/next/no-document-import-in-page': 'off',
     quotes: ['error', 'single'],
   },
 };

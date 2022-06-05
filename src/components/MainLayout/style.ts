@@ -23,10 +23,11 @@ const useStyles = makeStyles({
     marginLeft: 24,
     cursor: 'pointer',
   },
+  sideBarCenterContent: {
+    marginBottom: 120,
+  },
   sidebarList: {
-    padding: 0,
-    paddingLeft: 24,
-    listStyle: 'none',
+    marginBottom: 6,
   },
   sidebarItem: {},
   sidebarItemWrap: {

@@ -28,6 +28,7 @@ import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import useStyles from './style';
+import SideBarCalendar from '@/components/SideBarCalendar';
 
 const sideBarList = [
   {
@@ -147,35 +148,39 @@ export default function MainLayout({ title, ...props }: IMainLayoutProps) {
           className={classes.logo}
         />
       </a>
-      <List>
-        {sideBarList.map((item) => (
-          <StyledListItem
-            onClick={() => {
-              console.log(item.displayName);
-            }}
-            key={item.displayName}
-          >
-            <div
-              onClick={() => handleSidebarItemClick(item.href)}
-              className={classes.sidebarItemWrap}
+
+      <div className={classes.sideBarCenterContent}>
+        <List className={classes.sidebarList}>
+          {sideBarList.map((item) => (
+            <StyledListItem
+              onClick={() => {
+                console.log(item.displayName);
+              }}
+              key={item.displayName}
             >
-              <StyledListItemButton>
-                {router.asPath === item.href
-                  ? item.activeIcon
-                  : item.outlineIcon}
-                <Typography
-                  className={classes.sideBarItemText}
-                  sx={{
-                    color: router.asPath === item.href ? '#4D9EFE' : 'black',
-                  }}
-                >
-                  {item.displayName}
-                </Typography>
-              </StyledListItemButton>
-            </div>
-          </StyledListItem>
-        ))}
-      </List>
+              <div
+                onClick={() => handleSidebarItemClick(item.href)}
+                className={classes.sidebarItemWrap}
+              >
+                <StyledListItemButton>
+                  {router.asPath === item.href
+                    ? item.activeIcon
+                    : item.outlineIcon}
+                  <Typography
+                    className={classes.sideBarItemText}
+                    sx={{
+                      color: router.asPath === item.href ? '#4D9EFE' : 'black',
+                    }}
+                  >
+                    {item.displayName}
+                  </Typography>
+                </StyledListItemButton>
+              </div>
+            </StyledListItem>
+          ))}
+        </List>
+        <SideBarCalendar />
+      </div>
 
       <div className={classes.sidebarFooter}>
         <div
@@ -254,7 +259,7 @@ export default function MainLayout({ title, ...props }: IMainLayoutProps) {
           {renderSideBarContent()}
         </Drawer>
       </Box>
-      <Box sx={{flex: 1}}>
+      <Box sx={{ flex: 1 }}>
         <IconButton
           onClick={toggleDrawer(true)}
           sx={{ display: queryMin1200 ? 'none' : 'flex' }}

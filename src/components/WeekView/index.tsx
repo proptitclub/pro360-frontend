@@ -1,5 +1,5 @@
-import interactionPlugin from '@fullcalendar/interaction';
 import Calendar, { CalendarApi } from '@fullcalendar/react';
+import interactionPlugin from '@fullcalendar/interaction';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import clsx from 'clsx';
 import moment from 'moment';
