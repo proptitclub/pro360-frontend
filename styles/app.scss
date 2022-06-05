@@ -9,4 +9,8 @@
 @import './font';
 
 //custom
-@import './custom/main'
+@import './custom/main';
+
+* {
+  @include scrollbars();
+}

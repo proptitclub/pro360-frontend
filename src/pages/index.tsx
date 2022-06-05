@@ -1,17 +1,15 @@
+import React, { Fragment } from 'react';
 import MainLayout from '@/components/MainLayout';
-import { Container } from '@mui/material';
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Fragment } from 'react';
+import { Container } from '@mui/material';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <Fragment>
       <Head>
         <title>Home | Pro360</title>
       </Head>
 
-      {/* <MainLayout title='' /> */}
       <Container maxWidth='xl'>Home</Container>
     </Fragment>
   );

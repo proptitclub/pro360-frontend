@@ -254,7 +254,7 @@ export default function MainLayout({ title, ...props }: IMainLayoutProps) {
           {renderSideBarContent()}
         </Drawer>
       </Box>
-      <Box>
+      <Box sx={{flex: 1}}>
         <IconButton
           onClick={toggleDrawer(true)}
           sx={{ display: queryMin1200 ? 'none' : 'flex' }}

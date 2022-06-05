@@ -1,0 +1,15 @@
+/* Make clicks pass-through */
+#nprogress {
+  .bar {
+    background: $main_color;
+  }
+
+  .peg {
+    box-shadow: 0 0 10px $main_color, 0 0 5px $main_color;
+  }
+
+  .spinner-icon {
+    border-top-color: $main_color;
+    border-left-color: $main_color;
+  }
+}
