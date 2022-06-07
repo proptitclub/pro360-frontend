@@ -9,4 +9,10 @@
 @import './font';
 
 //custom
-@import './custom/main'
+@import './custom/main';
+
+* {
+  @include scrollbars();
+}
+ 
+@import '../src/components/SideBarCalendar/SidebarCalendar.scss'

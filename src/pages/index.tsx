@@ -1,27 +1,17 @@
-import { Box, Container, Typography } from '@mui/material';
-import type { NextPage } from 'next';
+import React, { Fragment } from 'react';
+import MainLayout from '@/components/MainLayout';
 import Head from 'next/head';
+import { Container } from '@mui/material';
 
-import MyButton from '@/components/MyButton';
-
-const Home: NextPage = () => {
+const Home = () => {
   return (
-    <>
+    <Fragment>
       <Head>
         <title>Home | Pro360</title>
       </Head>
-      <Container maxWidth='xl'>
-        <Box>
-          <Typography variant='h1' textAlign='center'>
-            Welcome to ProPTIT
-          </Typography>
-        </Box>
-        <Box>
-          <Typography variant='h4'>Đây là Pro360</Typography>
-          <MyButton variant='outlined' text='Get Started' />
-        </Box>
-      </Container>
-    </>
+
+      <Container maxWidth='xl'>Home</Container>
+    </Fragment>
   );
 };
 

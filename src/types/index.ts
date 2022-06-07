@@ -7,3 +7,9 @@ export interface ResponseGenerator {
   statusText?: string;
   meta?: any;
 }
+
+export enum EViewType {
+  LIST = 'List',
+  WEEK = 'Week',
+  MONTH = 'Month',
+}

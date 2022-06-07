@@ -12,7 +12,7 @@
   box-shadow: none;
   width: fit-content;
   padding: 12px 40px;
-  border-radius: 50px;
+  // border-radius: 50px;
 
   &:focus,
   &:active,
@@ -32,7 +32,7 @@
 }
 
 .button--outlined {
-  border: 1px solid $main_color !important;
+  border: 1px solid $main_color  !important;
   color: $main_color;
 
   &:hover {
@@ -41,13 +41,13 @@
 }
 
 .button--contained {
-  border: 1px solid $main_color !important;
+  border: 1px solid $main_color  !important;
   background-color: $main_color;
   color: $white_color;
 }
 
 .button--active {
-  border: 1px solid $main_color !important;
+  border: 1px solid $main_color  !important;
   background-color: rgba(77, 158, 254, 0.1);
   color: $main_color;
 }
