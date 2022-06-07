@@ -1,13 +1,14 @@
 import logo from '@/assets/logo.png';
 import Pro360 from '@/assets/Pro360.png';
+import SideBarCalendar from '@/components/SideBarCalendar';
 import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import EventIcon from '@mui/icons-material/Event';
 import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
 import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
@@ -28,7 +29,6 @@ import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import useStyles from './style';
-import SideBarCalendar from '@/components/SideBarCalendar';
 
 const sideBarList = [
   {
@@ -86,6 +86,14 @@ const footerList = [
   },
 ];
 
+const useSideBarRoutes = [
+  '/',
+  '/Calendar',
+  '/Bookmark',
+  '/Notification',
+  '/YourPosts',
+];
+
 const StyledListItem = styled(ListItem)(() => ({
   '&.MuiListItem-root': {
     paddingTop: 4,
@@ -99,11 +107,9 @@ const StyledListItemButton = styled(ListItemButton)(() => ({
   },
 }));
 
-interface IMainLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  title: string;
-}
+interface IMainLayoutProps extends React.HTMLProps<HTMLDivElement> {}
 
-export default function MainLayout({ title, ...props }: IMainLayoutProps) {
+export default function MainLayout({ ...props }: IMainLayoutProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [footerOpen, setFooterOpen] = React.useState(false);
   const classes = useStyles();
@@ -116,6 +122,11 @@ export default function MainLayout({ title, ...props }: IMainLayoutProps) {
     router.push(route);
     setFooterOpen(false);
   };
+
+  console.log(
+    'current: ',
+    useSideBarRoutes.some((route) => route == router.route)
+  );
 
   const handleFooterItemClick = (route?: string) => {
     console.log('footer item click: ', router);
@@ -248,17 +259,19 @@ export default function MainLayout({ title, ...props }: IMainLayoutProps) {
 
   return (
     <Box sx={{ display: 'flex' }} className='wrap-box'>
-      <Box>
-        <Drawer
-          variant={queryMin1200 ? 'permanent' : 'temporary'}
-          anchor='left'
-          open={queryMin1200 ? true : isOpen}
-          onClose={toggleDrawer(false)}
-          className={classes.sidebarWrap}
-        >
-          {renderSideBarContent()}
-        </Drawer>
-      </Box>
+      {useSideBarRoutes.some((route) => route == router.route) && (
+        <Box>
+          <Drawer
+            variant={queryMin1200 ? 'permanent' : 'temporary'}
+            anchor='left'
+            open={queryMin1200 ? true : isOpen}
+            onClose={toggleDrawer(false)}
+            className={classes.sidebarWrap}
+          >
+            {renderSideBarContent()}
+          </Drawer>
+        </Box>
+      )}
       <Box sx={{ flex: 1 }}>
         <IconButton
           onClick={toggleDrawer(true)}
